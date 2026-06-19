@@ -1,11 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { MotionCard, MotionGroup, MotionItem, MotionLink } from "@/components/motion";
+import { FeedbackCarousel, LocationMap, PairingCarousel } from "@/components/home-showcase";
 import {
-  customerMoments,
-  customerQuotes,
-  menuSections,
-  orderPairings,
   proof,
   signatures,
   site,
@@ -80,21 +77,9 @@ export default function Home() {
       </section>
 
       <section className="home-section pairing-section">
-        <div className="section-shell section-heading">
-          <div>
-            <p className="label">Order ideas</p>
-            <h2 className="display-section text-balance">Built for the way people actually eat.</h2>
-          </div>
+        <div className="section-shell">
+          <PairingCarousel />
         </div>
-        <MotionGroup className="section-shell pairing-grid">
-          {orderPairings.map((pairing) => (
-            <MotionCard className="pairing-card" key={pairing.title}>
-              <span>{pairing.title}</span>
-              <strong>{pairing.items}</strong>
-              <p>{pairing.note}</p>
-            </MotionCard>
-          ))}
-        </MotionGroup>
       </section>
 
       <section className="home-section cream-band" id="menu">
@@ -122,94 +107,15 @@ export default function Home() {
         </MotionGroup>
       </section>
 
-      <section className="home-section order-section">
-        <div className="section-shell order-grid">
-          <MotionGroup className="order-copy">
-            <MotionItem>
-              <p className="label">Order rhythm</p>
-              <h2 className="display-section text-balance">Start savory. Finish mango.</h2>
-            </MotionItem>
-            <MotionItem>
-              <p>
-                Guests can build the same kind of order people already make on
-                DoorDash: a desi burger or comfort bowl, a mango drink, then a snack
-                for later.
-              </p>
-            </MotionItem>
-            <MotionItem className="step-list">
-              {["Start with the burger", "Add Alphonso mango", "Order pickup on DoorDash"].map((step, index) => (
-                <div key={step}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <strong>{step}</strong>
-                </div>
-              ))}
-            </MotionItem>
-          </MotionGroup>
-          <MotionItem>
-            <div className="menu-stack-panel">
-              {menuSections.map((section) => (
-                <article key={section.name}>
-                  <span>{section.name}</span>
-                  <strong>{section.note}</strong>
-                  <p>{section.items.join(" · ")}</p>
-                </article>
-              ))}
-            </div>
-          </MotionItem>
-        </div>
-      </section>
-
       <section className="home-section feedback-section">
-        <div className="section-shell feedback-layout">
-          <MotionGroup className="feedback-copy">
-            <MotionItem>
-              <p className="label">Guest feedback</p>
-              <h2 className="display-section text-balance">The menu has more range than the name gives away.</h2>
-            </MotionItem>
-            <MotionItem>
-              <p>
-                Regulars come in for mango drinks, then find the paneer burgers,
-                momo noodle soup, fried rice, and spring rolls that make it a real meal.
-              </p>
-            </MotionItem>
-          </MotionGroup>
-          <MotionGroup className="quote-grid">
-            {customerQuotes.map((item) => (
-              <MotionCard className="quote-card" key={item.quote}>
-                <p>&ldquo;{item.quote}&rdquo;</p>
-                <span>{item.source}</span>
-              </MotionCard>
-            ))}
-          </MotionGroup>
+        <div className="section-shell">
+          <FeedbackCarousel />
         </div>
       </section>
 
       <section className="home-section visit-section">
-        <div className="section-shell visit-grid">
-          <div>
-            <p className="label">Visit Mango Factory</p>
-            <h2 className="display-section text-balance">Pick up downtown or order ahead.</h2>
-            <p>
-              Find Mango Factory on Commercial Street in San Jose. Order on DoorDash,
-              grab directions, or build a full lunch from burgers, mango drinks, and comfort food.
-            </p>
-            <div className="action-row">
-              <MotionLink className="button button-primary" href={site.orderUrl} target="_blank" rel="noreferrer">
-                Order online <ArrowIcon />
-              </MotionLink>
-              <MotionLink className="button button-ghost-dark" href={site.mapsUrl} target="_blank" rel="noreferrer">
-                Get directions
-              </MotionLink>
-            </div>
-          </div>
-          <div className="moment-list">
-            {customerMoments.map(([title, detail]) => (
-              <article key={title}>
-                <span>{title}</span>
-                <strong>{detail}</strong>
-              </article>
-            ))}
-          </div>
+        <div className="section-shell">
+          <LocationMap />
         </div>
       </section>
     </main>

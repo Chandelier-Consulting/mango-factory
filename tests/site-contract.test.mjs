@@ -5,6 +5,7 @@ import assert from "node:assert/strict";
 
 test("homepage is branded for Mango Factory with ordering and directions", async () => {
   const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  const showcase = await readFile(new URL("../components/home-showcase.tsx", import.meta.url), "utf8");
 
   assert.match(page, /Mango Factory/);
   assert.match(page, /Order online/);
@@ -13,8 +14,10 @@ test("homepage is branded for Mango Factory with ordering and directions", async
   assert.match(page, /Burgers, mango drinks, momos/);
   assert.match(page, /paneer\s+burgers/i);
   assert.match(page, /momo noodle soup/i);
-  assert.match(page, /Guest feedback/);
-  assert.match(page, /Pick up downtown or order ahead/);
+  assert.match(showcase, /Built like a little decision engine/);
+  assert.match(showcase, /What people repeat after the first visit/);
+  assert.match(showcase, /Open in Maps/);
+  assert.match(showcase, /Pick up downtown or order ahead/);
 });
 
 test("content model includes actual DoorDash burger and savory favorites", async () => {
