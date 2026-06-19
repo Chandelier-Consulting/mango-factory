@@ -85,7 +85,7 @@ export default function Home() {
       <section className="home-section cream-band" id="menu">
         <div className="section-shell section-heading">
           <div>
-            <p className="label">DoorDash favorites</p>
+            <p className="label">What people order</p>
             <h2 className="display-section text-balance">Burgers first. Mango right behind.</h2>
           </div>
           <Link className="button button-secondary" href="/menu">

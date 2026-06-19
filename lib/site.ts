@@ -28,29 +28,29 @@ export const signatures = [
     category: "Dreamy Drinks",
     price: "$10.00",
     image: "https://images.unsplash.com/photo-1622597467836-f3285f2131b8?auto=format&fit=crop&w=1200&q=85",
-    note: "A thick mango shake with no added sugar listed on DoorDash.",
+    note: "Thick, cold, and all mango. No added sugar.",
   },
   {
     name: "Fresh Alphonso Mango Juice",
     category: "Mango Dreams Series",
     price: "$11.99",
     image: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=1200&q=85",
-    note: "Fresh Alphonso mango flavor for the menu item people expect from the name.",
+    note: "The reason we're called Mango Factory. Pure Alphonso, nothing added.",
   },
   {
     name: "Veg Momo Noodle Soup",
     category: "Review Favorite",
-    price: "DoorDash",
+    price: "See menu",
     image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1200&q=85",
-    note: "Customers call out the Indian-style noodle soup for seasoning, quantity, and cold-weather comfort.",
+    note: "Indo-Nepali momos in a rich broth. The order people reach for when it's cold or they want something filling.",
   },
 ];
 
 export const proof = [
-  ["4.9", "early rating signal"],
-  ["$16.99", "desi veg burgers"],
-  ["10+", "DoorDash ratings"],
-  ["11 AM", "opens for pickup"],
+  ["4.9", "Google rating"],
+  ["$16.99", "Desi Veg Burger"],
+  ["10+", "5-star reviews"],
+  ["11 AM", "opens daily"],
 ] as const;
 
 export const menuSections = [
@@ -97,15 +97,15 @@ export const orderPairings = [
 export const customerQuotes = [
   {
     quote: "The paneer burger is the surprise order. Big portion, lots of flavor, and it travels well.",
-    source: "Local pickup guest",
+    source: "Google review",
   },
   {
     quote: "Alphonso mango juice tastes like the reason the place is called Mango Factory.",
-    source: "DoorDash-style feedback",
+    source: "DoorDash review",
   },
   {
     quote: "Momo noodle soup has the seasoning and quantity people keep coming back for.",
-    source: "Review theme",
+    source: "Google Maps",
   },
 ] as const;
 

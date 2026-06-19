@@ -32,10 +32,10 @@ export function PairingCarousel() {
   return (
     <div className="carousel-shell">
       <div className="carousel-copy">
-        <p className="label">Order ideas</p>
-        <h2 className="display-section text-balance">Built like a little decision engine.</h2>
+        <p className="label">Good combos</p>
+        <h2 className="display-section text-balance">Three ways to eat here.</h2>
         <p>
-          The combos rotate through the orders people already make: burger first, mango second, comfort food when they want more.
+          The burger and a mango drink is the move most people land on. The soup is the one they come back for.
         </p>
         <div className="carousel-controls">
           <button type="button" onClick={() => setActive((active + orderPairings.length - 1) % orderPairings.length)}>
@@ -96,10 +96,10 @@ export function FeedbackCarousel() {
   return (
     <div className="feedback-carousel">
       <div className="feedback-head">
-        <p className="label">Guest feedback</p>
-        <h2 className="display-section text-balance">What people repeat after the first visit.</h2>
+        <p className="label">What people say</p>
+        <h2 className="display-section text-balance">The food does most of the talking.</h2>
         <p>
-          Keep the story customer-facing. The feedback is what sells the place: burgers, mango drinks, and comfort food.
+          Paneer burger, Alphonso juice, momo soup. The things people come back for and tell people about.
         </p>
       </div>
 
@@ -148,10 +148,10 @@ export function LocationMap() {
         viewport={{ once: false, amount: 0.35 }}
         transition={{ duration: reduce ? 0 : 0.7, ease: SLIDE_EASE }}
       >
-        <p className="label">Visit Mango Factory</p>
-        <h2 className="display-section text-balance">Pick up downtown or order ahead.</h2>
+        <p className="label">Find us</p>
+        <h2 className="display-section text-balance">Downtown San Jose, on Commercial St.</h2>
         <p>
-          Pick up downtown or order ahead. 326 Commercial St, San Jose. A quick map, the address, and the actions that matter.
+          We're at 326 Commercial St. Order ahead on DoorDash or swing by — kitchen opens at 11 AM daily.
         </p>
         <div className="map-actions">
           <a className="button button-primary" href={site.orderUrl} target="_blank" rel="noreferrer">

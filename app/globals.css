@@ -8,8 +8,8 @@
   --paper: #fff8ea;
   --panel: #ffffff;
   --muted: #766453;
-  --mango: #f2a900;
-  --mango-deep: #bd650f;
+  --mango: #d8920a;
+  --mango-deep: #a85308;
   --leaf: #205f3b;
   --guava: #c8462d;
   --line: rgba(23, 16, 10, 0.13);
@@ -247,12 +247,14 @@ a {
 .hero-grid-overlay {
   position: absolute;
   inset: 0;
-  background-image:
-    radial-gradient(circle at 24px 24px, rgba(242, 169, 0, 0.16) 0 5px, transparent 6px),
-    linear-gradient(rgba(255, 248, 234, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 248, 234, 0.05) 1px, transparent 1px);
-  background-size: 104px 104px, 52px 52px, 52px 52px;
-  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent 0,
+    transparent 5px,
+    rgba(255, 248, 234, 0.022) 5px,
+    rgba(255, 248, 234, 0.022) 6px
+  );
+  mask-image: linear-gradient(180deg, transparent 0%, #000 18%, #000 82%, transparent 100%);
 }
 
 .hero-layout {
