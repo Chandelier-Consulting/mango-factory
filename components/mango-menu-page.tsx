@@ -180,17 +180,6 @@ export function MenuPageClient() {
         )}
       </section>
 
-      <section className="home-section cream-band">
-        <div className="section-shell section-heading">
-          <div>
-            <p className="label">Top favorites</p>
-            <h2 className="display-section">Try these popular items.</h2>
-          </div>
-          <MotionLink className="button button-secondary" href={site.orderUrl} target="_blank" rel="noreferrer">
-            Open on DoorDash
-          </MotionLink>
-        </div>
-      </section>
     </main>
   );
 }
