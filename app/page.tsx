@@ -83,15 +83,6 @@ export default function Home() {
       </section>
 
       <section className="home-section cream-band" id="menu">
-        <div className="section-shell section-heading">
-          <div>
-            <p className="label">What people order</p>
-            <h2 className="display-section text-balance">Burgers, mango drinks, and cozy bowls are our favorites.</h2>
-          </div>
-          <Link className="button button-secondary" href="/menu">
-            View menu
-          </Link>
-        </div>
         <MotionGroup className="section-shell signature-grid">
           {signatures.map((item) => (
             <MotionCard className="signature-card" key={item.name}>
