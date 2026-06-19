@@ -57,6 +57,8 @@ export type MenuItem = {
   name: string;
   description: string;
   price: string;
+  tags: string[];
+  image: string;
 };
 
 export type MenuSection = {
@@ -68,87 +70,109 @@ export type MenuSection = {
 export const menuSections: MenuSection[] = [
   {
     name: "Desi Burgers",
-    note: "The savory core. These drive the highest reorder rate.",
+    note: "Savory anchors with the strongest repeat rate.",
     items: [
       {
         name: "Desi Veg Paneer Burger",
-        description:
-          "House-spiced paneer, cheddar, roasted onion, and house chutney on a toasted brioche bun.",
+        description: "Paneer, cheddar, roasted onion, and house chutney on a brioche bun.",
         price: "$16.99",
+        tags: ["Burgers", "Popular", "Most Ordered"],
+        image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85",
       },
       {
         name: "Desi Veg Cheese Burger",
-        description:
-          "Melted Indian-style cheese blend, crunchy lettuce, tomato, pickled onion, and tangy sauce.",
+        description: "Indian-spiced cheese blend, lettuce, tomato, pickled onion, and smoky-sweet sauce.",
         price: "$17.99",
+        tags: ["Burgers", "Popular"],
+        image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85",
       },
     ],
   },
   {
     name: "Alphonso Mango Drinks",
-    note: "Cold, rich, and made for first bites and long waits.",
+    note: "Cold, bright, and commonly ordered with savory mains.",
     items: [
       {
         name: "Sweet Mango Milkshake",
-        description: "Creamy mango shake blended with ice cream and a lightly spiced milk base.",
+        description: "Creamy mango shake blended with ice cream and lightly spiced dairy.",
         price: "$10.00",
+        tags: ["Drinks", "Popular", "Most Ordered"],
+        image: "https://images.unsplash.com/photo-1622597467836-f3285f2131b8?auto=format&fit=crop&w=900&q=85",
       },
       {
         name: "Fresh Alphonso Milkshake 16 oz",
-        description: "Extra-thick Alphonso blend served in a tall cup for carryout.",
+        description: "Richer Alphonso blend in a larger cup for carryout.",
         price: "$11.99",
+        tags: ["Drinks", "Popular"],
+        image: "https://images.unsplash.com/photo-1622597467836-f3285f2131b8?auto=format&fit=crop&w=900&q=85",
       },
       {
         name: "Fresh Alphonso Mango Juice",
-        description: "Straight juice, no foam, no over-dilution, served chilled.",
+        description: "Straight Alphonso juice, chilled and unsweetened.",
         price: "$11.99",
+        tags: ["Drinks", "Most Ordered"],
+        image: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=900&q=85",
       },
       {
         name: "Alphonso Mango Slice",
-        description: "Fresh mango wedges in a shared cup.",
+        description: "Sweet mango wedges served chilled in a shared cup.",
         price: "$6.50",
+        tags: ["Drinks"],
+        image: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=900&q=85",
       },
     ],
   },
   {
     name: "Soup and Bowls",
-    note: "Hearty sides and bowl orders people add to every lunch order.",
+    note: "Lunch-leaning options for filling, no-fuss dining.",
     items: [
       {
         name: "Veg Momo Noodle Soup",
-        description: "Brothy noodle soup with vegetable momos, coriander, scallion, and soft egg noodles.",
+        description: "Vegetable momos, soft noodles, and broth with coriander and scallion.",
         price: "$14.00",
+        tags: ["Comfort", "Popular", "Bowl"],
+        image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=900&q=85",
       },
       {
         name: "Veg Fried Rice",
-        description: "Fragrant rice with mixed vegetables, egg options available by request.",
+        description: "Toasted rice with vegetables and light house-seasoned sauce.",
         price: "$12.50",
+        tags: ["Comfort", "Bowl"],
+        image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=85",
       },
       {
         name: "Veg Spring Rolls",
-        description: "Crispy rolls with mildly spiced veggie filling and sweet chili dipping sauce.",
+        description: "Crispy rolls with mild veggie filling and house sweet-chili dip.",
         price: "$8.50",
+        tags: ["Comfort", "Add-On"],
+        image: "https://images.unsplash.com/photo-1596662951482-f5f6d6d0e0c1?auto=format&fit=crop&w=900&q=85",
       },
     ],
   },
   {
     name: "Drinks, Boba, and Snacks",
-    note: "Quick add-ons that pair well with every order.",
+    note: "Pairs with most full meals and group orders.",
     items: [
       {
         name: "Boba",
-        description: "Cold tea-based drink with chewy tapioca pearls.",
+        description: "Iced tea with chewy tapioca pearls.",
         price: "$6.00",
+        tags: ["Snacks", "Add-On"],
+        image: "https://images.unsplash.com/photo-1610889556528-9a770e9fd1e2?auto=format&fit=crop&w=900&q=85",
       },
       {
         name: "Magical Bagel",
-        description: "Dense bagel cut with honeyed glaze and seasonal topping blend.",
+        description: "Dense bagel topped with a seasonal glaze.",
         price: "$7.50",
+        tags: ["Snacks", "Add-On"],
+        image: "https://images.unsplash.com/photo-1604908176997-125fddc0f2f8?auto=format&fit=crop&w=900&q=85",
       },
       {
         name: "Dreamy Drinks",
-        description: "Seasonal house drinks not listed on every platform; ask for today's board.",
-        price: "Ask Store",
+        description: "Seasonal house drinks; check the counter for today's options.",
+        price: "Ask at counter",
+        tags: ["Drinks", "Add-On"],
+        image: "https://images.unsplash.com/photo-1563903532903-4e1ca7c6cb7e?auto=format&fit=crop&w=900&q=85",
       },
     ],
   },
